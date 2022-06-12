@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-100: #ff7a7a;
+  --color-primary-200: #38cc8c;
+
+  --color-accent-100: #6055a5;
+
+  --color-neutral-100: #b9b6d3;
+  --color-neutral-200: #3e3c49;
+
+  --color-shadow-100: rgba(62, 60, 73, 0.25);
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  padding: 5rem 1.5rem;
+
+  color: #fff;
+  user-select: none;
+
+  background-image: url("./images/bg-intro-mobile.png");
+  background-size: contain;
+  background-color: var(--color-primary-100);
+  background-blend-mode: colors;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary-100);
+  font-weight: 600;
+  transition: 0.15s opacity ease-in-out;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 450px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.intro__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.intro__text h1 {
+  max-width: 13ch;
+  text-align: center;
+  line-height: 1.35;
+}
+
+.intro__text p {
+  text-align: center;
+  opacity: 0.9;
+}
+
+.intro__signup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.intro__signup--trial {
+  display: flex;
+  justify-content: center;
+
+  padding: 1rem 0;
+  width: 100%;
+
+  background-color: var(--color-accent-100);
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px var(--color-shadow-100);
+}
+
+.intro__signup--trial p {
+  font-size: 14px;
+  font-weight: 300;
+  max-width: 20ch;
+  text-align: center;
+}
+
+.intro__signup--trial p > span {
+  font-weight: 500;
+}
+
+.intro__signup--form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.25rem;
+  gap: 1rem;
+
+  box-shadow: 0px 7px 0px var(--color-shadow-100);
+}
+
+.intro__signup--form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.signup__form--input-error {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.signup__form--input-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-shadow-100);
+  border-radius: 5px;
+}
+
+.signup__form--input-container input {
+  color: #26252e;
+  width: 100%;
+  font-weight: 400;
+}
+
+.signup__form--input-container input::placeholder {
+  color: var(--color-neutral-200);
+  font-weight: 600;
+}
+
+.signup__form--error-icon {
+  height: 20px;
+}
+
+.signup__form--input-error p {
+  align-self: flex-end;
+
+  font-size: 12px;
+  color: var(--color-primary-100);
+}
+
+.intro__signup--form form button {
+  padding: 1rem 0;
+  background-color: var(--color-primary-200);
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  box-shadow: 0px 5px 0px #30ba7f;
+  transition: 0.15s opacity ease-in-out;
+}
+
+.intro__signup--form form button:hover {
+  opacity: 0.75;
+}
+
+.intro__signup--form form button:active {
+  transform: translateY(5px);
+  box-shadow: none;
+}
+
+.intro__signup--form > p {
+  font-size: 11px;
+  text-align: center;
+  color: var(--color-neutral-100);
+  max-width: 35ch;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1440px) {
+  main {
+    max-width: unset;
+  }
+
+  .intro {
+    flex-direction: row;
+    gap: 5rem;
+  }
+
+  .intro__text {
+    max-width: 50ch;
+    align-items: flex-start;
+  }
+
+  .intro__text h1 {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: 1.5px;
+    max-width: unset;
+    text-align: left;
+  }
+
+  .intro__text p {
+    text-align: left;
+  }
+
+  .intro__signup {
+    min-width: 500px;
+  }
+  .intro__signup--form {
+    padding: 2.5rem 2rem;
+  }
+
+  .intro__signup--form > p {
+    max-width: unset;
+  }
+
+  .intro__signup--trial p {
+    max-width: unset;
+  }
+}

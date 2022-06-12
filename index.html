@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer type="module" src="./script.js"></script>
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <main>
+      <section class="intro">
+        <div class="intro__text">
+          <h1 class="intro__text--title">Learn to code by watching others</h1>
+          <p class="intro__text--body">
+            See how exeperienced developers solve problems in real-time.
+            Watching scripted tutorials is great, but understanding how
+            developers think is invaluable.
+          </p>
+        </div>
+        <div class="intro__signup">
+          <div class="intro__signup--trial">
+            <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+          </div>
+          <div class="intro__signup--form">
+            <form class="signup__form" novalidate autocomplete="off" action="">
+              <div class="signup__form--input-error">
+                <div class="signup__form--input-container">
+                  <input
+                    required
+                    class="signup__form--input input"
+                    type="text"
+                    placeholder="First Name"
+                  />
+                  <img
+                    class="signup__form--error-icon error__icon hidden"
+                    src="./images/icon-error.svg"
+                    alt=""
+                  />
+                </div>
+                <p class="signup__form--error-text error__text hidden"></p>
+              </div>
+              <div class="signup__form--input-error">
+                <div class="signup__form--input-container">
+                  <input
+                    required
+                    class="signup__form--input input"
+                    type="text"
+                    placeholder="Last Name"
+                  />
+                  <img
+                    class="signup__form--error-icon error__icon hidden"
+                    src="./images/icon-error.svg"
+                    alt=""
+                  />
+                </div>
+                <p class="signup__form--error-text error__text hidden"></p>
+              </div>
+              <div class="signup__form--input-error">
+                <div class="signup__form--input-container">
+                  <input
+                    required
+                    class="signup__form--input input"
+                    type="email"
+                    placeholder="Email Address"
+                    minlength="8"
+                  />
+                  <img
+                    class="signup__form--error-icon error__icon hidden"
+                    src="./images/icon-error.svg"
+                    alt=""
+                  />
+                </div>
+                <p class="signup__form--error-text error__text hidden"></p>
+              </div>
+              <div class="signup__form--input-error">
+                <div class="signup__form--input-container">
+                  <input
+                    required
+                    class="signup__form--input input"
+                    type="password"
+                    placeholder="Password"
+                    minlength="8"
+                  />
+                  <img
+                    class="signup__form--error-icon error__icon hidden"
+                    src="./images/icon-error.svg"
+                    alt=""
+                  />
+                </div>
+                <p class="signup__form--error-text error__text hidden"></p>
+              </div>
+              <button class="intro__signup--button button" type="submit">
+                Claim your free trial
+              </button>
+            </form>
+            <p class="signup__form--tos">
+              By clicking the button you are agreeing for our
+              <a href="#">Terms of Services</a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
